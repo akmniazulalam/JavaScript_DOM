@@ -35,7 +35,16 @@ console.log(heading4);
 let heading5 = document.querySelector("h3")
 let button = document.querySelector("button")
 let body = document.querySelector("body")
-
+let button2 = document.getElementById("reset")
+let originalStyles = {
+    color: heading5.style.color,
+    fontSize: heading5.style.fontSize,
+    backgroundColor: heading5.style.backgroundColor,
+    textAlign: heading5.style.textAlign,
+    fontStyle: heading5.style.fontStyle,
+    backgroundColor: body.style.backgroundColor,
+    textTransform: heading5.style.textTransform,
+}
 button.addEventListener("click", function () {
     heading5.style.color= "teal"
     heading5.style.fontSize= "50px"
@@ -45,6 +54,18 @@ button.addEventListener("click", function () {
     body.style.backgroundColor = "lightslategray"
     heading5.style.textTransform = "uppercase"
 })
+
+
+button2.addEventListener("click", function () {
+    heading5.style.color = originalStyles.color;
+    heading5.style.fontSize = originalStyles.fontSize;
+    heading5.style.backgroundColor = originalStyles.backgroundColor;
+    heading5.style.textAlign= originalStyles.textAlign;
+    heading5.style.fontStyle= originalStyles.fontStyle
+    body.style.backgroundColor = originalStyles.backgroundColor
+    heading5.style.textTransform = originalStyles.textTransform
+})
+
 
 
 
